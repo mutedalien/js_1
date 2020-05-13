@@ -75,6 +75,23 @@ while (f < 10) {
     f++;
 }
 
+// ЕЩЕ ЦИКЛЫ
+let car = {
+    cilor: 'red',
+    maxSpeed: 250,
+    audio: {
+        brand: 'Sony',
+        speakers: 12
+    }
+};
+if(car.color == 'red') {
+    console.log('Автомобиль красный');
+} else if (car.color == 'green'){
+    console.log('Автомобиль зеленый');
+} else {
+    console.log('Цвет не определен');
+}
+
 // ФУНКЦИИ
 function sum(a, b) {
     return a + b;
