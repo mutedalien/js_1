@@ -100,6 +100,22 @@ console.log(sum(10, 59));
 console.log(sum(3, 167));
 console.log(sum(22, 88));
 
+// ЕЩЕ ФУНКЦИИ
+let car = {
+    color: 'red'
+};
+let car2 = {
+    color: 'green'
+};
+
+colorChange(car); // вызываем функцию
+
+function colorChange(theCar){ // принимаем на вход параметры
+    theCar.color = 'yellow'; // изменяем параметр
+};
+console.log("Car: " + car.color);
+console.log("Car2: " + car2.color);
+
 // ОБЪЕКТЫ
 var myObject = {
     name: "Вася",
