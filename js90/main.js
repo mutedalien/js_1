@@ -128,3 +128,20 @@ var myObject = {
 myObject.name = "Петя"; // меняем Васю на Петю
 console.log(myObject.name);
 console.log(myObject.getFullName());
+
+// КЛАССЫ
+class Hater {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    sayName() {
+        console.log('Наш хейтер: ${this.firstName} ${this.lastName}')
+    }
+}
+
+let hater = new Hater('Норман', 'Озборн');
+hater1.sayName();
+
+let hater = new Hater('Доктор', 'Дум');
+hater2.sayName();
