@@ -1,0 +1,10 @@
+"use strict";
+
+let str14, str19, str20;
+str14 = '<p>7.  Сравнить null и 0. Попробуйте объяснить результат.</p>';
+str19 = '<pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #003366; font-weight: bold;">null</span> <span style="color: #339933;">&gt;</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// false</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #003366; font-weight: bold;">null</span> <span style="color: #339933;">&lt;</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// false</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #003366; font-weight: bold;">null</span> <span style="color: #339933;">==</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// false</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #003366; font-weight: bold;">null</span> <span style="color: #339933;">&gt;=</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// true</span></div></li></ol></pre>';
+str20 = '<p>Традиционно null используется чтобы указать на отсутсвие вообще какого-либо значения а 0 это уже конкретное значение</p>';
+
+function myFunction7(){
+    document.getElementById('paragraph').innerHTML = str14 + str19 + "<b>Ответ: </b>" + str20;
+}
