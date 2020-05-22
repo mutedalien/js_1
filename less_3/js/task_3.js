@@ -8,7 +8,7 @@ str6 = '<pre class="javascript" style="font-family:monospace;"><ol><li style="fo
 function myFunction3(){
     document.getElementById('question').innerHTML = str5 + str6;
 
-    for (let i = 0; i < 9; i++, console.log(i)) {}
+    for (let i = 0; i < 9; console.log(i++)) {}
     document.getElementById('answer').innerHTML = "<b>Ответ в консоли</b>";
 
 }
