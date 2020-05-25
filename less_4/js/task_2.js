@@ -123,4 +123,5 @@ function myFunction2(){
 
         return answer;
     }
+    document.getElementById('answer').innerHTML = "<b>Результат в консоли</b>";
 }
