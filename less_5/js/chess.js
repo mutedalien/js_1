@@ -6,38 +6,38 @@ function start() {
     str4 = '';
     document.getElementById('question').innerHTML = str1 + str2 + str3 + str4;
 
-    var mainDiv = document.createElement('div');//div обертка
-    document.querySelector("section").appendChild(mainDiv);
+    var mainDiv = document.createElement('div');                    // оболочка
+    document.querySelector("section").appendChild(mainDiv);         //  селектор, в котором разместится доска
     mainDiv.id = "main";
-    var liters = [null, "A", "B", "C", "D", "E", "F" , "G", "H"];// массив для заполнения букв 0 элемент не нужен
+    var liters = [null, "A", "B", "C", "D", "E", "F" , "G", "H"];   // массив для хранения букв (0 элемент не нужен)
 
-    var squareColor;// переменная для определения цвета квадрата
+    var squareColor;                // объявляем переменную для хранения цвета квадрата
 
-    for(var i = 0; i <= 9; i++) {//цикл с линиями 0 и 9 для букв, 1-8 линии с квадратами
+    for(var i = 0; i <= 9; i++) {   //  цикл с линиями 0 и 9 для букв, 1-8 линии с квадратами
 
         var div = document.createElement('div');
-        main.appendChild(div);//создаю div с div-ами в линию
-        var idLine = "line" + i;// переменная с id линии
-        div.id = idLine;//запись id для div первого цикла
-        div.className = "both";//стиль для новой строки
+        main.appendChild(div);      //  создаем div с div-ами в линию
+        var idLine = "line" + i;    //  переменная с id линии
+        div.id = idLine;            //  запись id для div первого цикла
+        div.className = "both";     //  стиль для новой строки
 
-        for(var j = 0; j <= 9; j++) {//цикл с кол-вом квадратов в линии, 0 и 9 столбы с буквами
+        for(var j = 0; j <= 9; j++) {   //  цикл с кол-вом клеток в линии, 0 и 9 столбы с буквами
 
             var line = document.getElementById(idLine);
 
-            if(i > 0 && i < 9) {//отсекаю буквы
+            if(i > 0 && i < 9) {        //  отсекем буквы
 
-                if(j > 0 && j < 9) {//отсекаю цифры
+                if(j > 0 && j < 9) {    //  отсекем цифры
 
                     squareColor = i + j;
 
-                    if(squareColor % 2 == 0){//раскрашиваю квадраты
+                    if(squareColor % 2 == 0){   //  закрашиваем квадраты
                         var divInLine = document.createElement('div');
                         line.appendChild(divInLine);
                         divInLine.className = "square even";
-                        if (i == 7) {//белые четные пешки
+                        if (i == 7) {           // белые четные пешки
                             divInLine.innerHTML = "&#9817;";
-                        } else if (i == 2) {//черные четные пешки перевернутые
+                        } else if (i == 2) {    //  черные четные пешки перевернутые
                             divInLine.innerHTML = "&#9823;";
                             divInLine.className = "square even revers";
                         }
@@ -46,19 +46,19 @@ function start() {
                         var divInLine = document.createElement('div');
                         line.appendChild(divInLine);
                         divInLine.className = "square odd";
-                        if (i == 7) {//белые нечетные пешки
+                        if (i == 7) {           //  белые нечетные пешки
                             divInLine.innerHTML = "&#9817;";
-                        } else if (i == 2) {//черные нечетные пешки перевернутые
+                        } else if (i == 2) {    //  черные нечетные пешки перевернутые
                             divInLine.innerHTML = "&#9823;";
                             divInLine.className = "square odd revers";
                         }
                     }
-                } else if (j == 0) {//линия с цифрами
+                } else if (j == 0) {                //  линия с цифрами
                     var divInLine = document.createElement('div');
                     line.appendChild(divInLine);
                     divInLine.className = "vertical";
-                    divInLine.innerText = (9 - i);//цифры в обратном отсчете
-                } else if (j == 9) {//линия с перевернутыми цифрами
+                    divInLine.innerText = (9 - i);  //  цифры в обратном отсчете
+                } else if (j == 9) {                //  линия с перевернутыми цифрами
                     var divInLine = document.createElement('div');
                     line.appendChild(divInLine);
                     divInLine.className = "vertical revers";
@@ -67,11 +67,11 @@ function start() {
 
             }else if (i == 9) {
 
-                if(j == 9 || j == 0) {//угловые заглушки
+                if(j == 9 || j == 0) {      //  угловые заглушки
                     var divInLine = document.createElement('div');
                     line.appendChild(divInLine);
                     divInLine.className = "gorizontalZero";
-                } else {//линия с буквами
+                } else {                    //  линия с буквами
                     var divInLine = document.createElement('div');
                     line.appendChild(divInLine);
                     divInLine.className = "gorizontal";
@@ -80,46 +80,46 @@ function start() {
 
             }else if (i == 0) {
 
-                if(j == 9 || j == 0) {//угловые заглушки
+                if(j == 9 || j == 0) {  //  угловые заглушки
                     var divInLine = document.createElement('div');
                     line.appendChild(divInLine);
                     divInLine.className = "gorizontalZero";
-                } else {//линия с буквами
+                } else {                //  линия с буквами
                     var divInLine = document.createElement('div');
                     line.appendChild(divInLine);
                     divInLine.className = "gorizontal revers";
-                    divInLine.innerText = liters[j];//заполняю значениями из массива
+                    divInLine.innerText = liters[j];        //  заполняем значениями из массива
                 }
 
             }
 
-            if((i == 1 && j == 1)||(i == 1 && j == 8)) {//перевернутая ладья
+            if((i == 1 && j == 1)||(i == 1 && j == 8)) {    //  перевернутая ладья
                 divInLine.innerHTML = "&#9820;";
                 divInLine.className += " revers";
             }
-            if((i == 1 && j == 2)||(i == 1 && j == 7)) {//перевернутый конь
+            if((i == 1 && j == 2)||(i == 1 && j == 7)) {    //  перевернутый конь
                 divInLine.innerHTML = "&#9822;";
                 divInLine.className += " revers";
             }
-            if((i == 1 && j == 3)||(i == 1 && j == 6)) {//перевернутый слон
+            if((i == 1 && j == 3)||(i == 1 && j == 6)) {    //  перевернутый слон
                 divInLine.innerHTML = "&#9821;";
                 divInLine.className += " revers";
             }
-            if(i == 1 && j == 4) {//перевернутый король
+            if(i == 1 && j == 4) {                          //  перевернутый король
                 divInLine.innerHTML = "&#9818;";
                 divInLine.className += " revers";
             }
-            if(i == 1 && j == 5) {//перевернутый ферзь
+            if(i == 1 && j == 5) {                          //  перевернутый ферзь
                 divInLine.innerHTML = "&#9819;";
                 divInLine.className += " revers";
             }
-            if((i == 8 && j == 1)||(i == 8 && j == 8)) {//ладья
+            if((i == 8 && j == 1)||(i == 8 && j == 8)) {    //  ладья
                 divInLine.innerHTML = "&#9814;";
             }
-            if((i == 8 && j == 2)||(i == 8 && j == 7)) {//конь
+            if((i == 8 && j == 2)||(i == 8 && j == 7)) {    //  конь
                 divInLine.innerHTML = "&#9816;";
             }
-            if((i == 8 && j == 3)||(i == 8 && j == 6)) {//слон
+            if((i == 8 && j == 3)||(i == 8 && j == 6)) {    //  слон
                 divInLine.innerHTML = "&#9815;";
             }
             if(i == 8 && j == 4) {//король
