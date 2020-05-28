@@ -152,11 +152,10 @@ var cadi = {
 
 var newObj = {};
 
-delete cadi.passengers;
-
-cadi.state = "normal";
+delete cadi.passengers; //  удаляем
+cadi.state = "normal";  //  добавляем
+cadi.year = 1950;       //  изменяем
 console.log(cadi);
-
 console.log(cadi.passengers);
 
 // КЛАССЫ
