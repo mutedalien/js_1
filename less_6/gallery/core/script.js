@@ -58,8 +58,6 @@ doc.getElementById('myImg').innerHTML = '<img src="img/1.jpg">';
 
 gen_Galery();
 
-;
-
 var scroll_Left = function (evt) {
     if (evt.toElement.parentNode.id == 'scroll_Left') {
         let xScrollWidth = doc.getElementById('scrolling').scrollWidth;
@@ -74,7 +72,6 @@ var scroll_Left = function (evt) {
         doc.getElementById('scrolling').scrollLeft = move_scrol_to;
     }
 }
-
 
 var scroll_Right = function (evt) {
     if (evt.toElement.parentNode.id == 'scroll_Right') {
@@ -91,7 +88,6 @@ var scroll_Right = function (evt) {
     }
 }
 
-// Наложение функции через нажатие кнопки мыши
 myContiner();
 doc.addEventListener('click', eventos);
 doc.addEventListener('click', scroll_Left);
