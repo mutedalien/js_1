@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat|Indie+Flower&display=swap');
+
+body {
+    background-color: lightgrey;
+}
+
+#main {
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+    background: lightgrey;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: goldenrod;
+}
+
+.header_text {
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    padding: 30px 0 0 50px;
+    width: 500px;
+    float: left;
+    box-sizing: border-box;
+}
+
+#basket {
+    font-family: 'Caveat', cursive;
+    width: 300px;
+    float: right;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #1219a1;
+    padding: 40px 0 0 0px;
+}
+
+#basket a {
+    color: #0b0f5e;
+}
+
+#content {
+    display: block;
+    width: 100%;
+    background: #FEFEFE;
+}
+
+#content::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.product {
+    display: block;
+    box-sizing: border-box;
+    border: 1px gray solid;
+    float: left;
+    width: 250px;
+    height: 300px;
+    margin: 40px 8px 8px 8px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 25px;
+    border-radius: 30px;
+}
+
+.product img {
+    height: 50px;
+}
