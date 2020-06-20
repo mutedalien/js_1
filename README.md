@@ -1,1 +1,1 @@
-# js_1 GeekBrains
+# JavaScript. Уровень 1
